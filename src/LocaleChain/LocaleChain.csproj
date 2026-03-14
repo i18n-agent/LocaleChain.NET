@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net6.0;netstandard2.0</TargetFrameworks>
+    <RootNamespace>I18nAgent.LocaleChain</RootNamespace>
+    <PackageId>I18nAgent.LocaleChain</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>i18nagent.ai</Authors>
+    <Description>Configurable locale fallback chains for .NET — automatic deep-merge resolution with IStringLocalizer support for ASP.NET Core, MAUI, and WPF.</Description>
+    <PackageTags>i18n localization locale fallback chain dotnet aspnet maui</PackageTags>
+    <RepositoryUrl>https://github.com/i18n-agent/dotnet-localechain</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://i18nagent.ai</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Copyright>Copyright (c) 2026 i18nagent.ai</Copyright>
+    <LangVersion>10.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="I18nAgent.LocaleChain.Tests" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
+    <PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="6.0.0" />
+  </ItemGroup>
+
+</Project>

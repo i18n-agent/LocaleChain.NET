@@ -442,6 +442,16 @@ The default locale is `"en"`. To change it, create a `FallbackResolver` directly
 **What .NET versions are supported?**
 The package targets .NET 6.0 and .NET Standard 2.0, which covers .NET 6+, .NET Core 2.0+, and .NET Framework 4.6.1+.
 
+## Example
+
+A minimal example app is included in the [`example/`](./example/) directory. It demonstrates the locale chain resolving three keys for `pt-BR`, showing fallback from `pt-BR -> pt -> en`.
+
+```bash
+cd example && dotnet run
+```
+
+See [`example/README.md`](./example/README.md) for full setup instructions.
+
 ## Contributing
 
 - Open issues for bugs or feature requests.
